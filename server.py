@@ -1,7 +1,11 @@
-print("This is Python Project")
-print("this is Agam Pandey")
-print("Mayank Soni")
-print("This is hrittik")
-##hello everyone
-print("this is kartik")
-print("This is manvendra")
+import socket
+import threading
+import tkinter as tk
+#main-window
+chat_Room_root=tk.Tk()
+
+#widgets
+chat_Room_root.title("Chat Room")
+
+#running mainloop
+chat_Room_root.mainloop()
