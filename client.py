@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import scrolledtext, messagebox
 import time
 
-HOST = '127.0.0.1'
+HOST = '192.168.226.102'
 PORT = 12345
 
 
