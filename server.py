@@ -34,5 +34,9 @@ def remove_client(client_sock,room_code):
             del rooms[room_code]
     return username
 
+def handle_client(client_sock, addr):
+    room_code = None
+    username = None
+
 
 
