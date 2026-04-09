@@ -2,7 +2,7 @@
 
 This project demonstrates how a basic Chat - Room works.
 
-![[chat room.png]]
+<img width="741" height="341" alt="chat room" src="https://github.com/user-attachments/assets/9b8607eb-8d7d-4562-81cf-823a04350648" />
 
 Multiple Clients can connect to server or room using a specific room code, then broadcast their message their to everyone. (as demonstrated in image)
 
