@@ -4,8 +4,8 @@ import tkinter as tk
 from tkinter import scrolledtext, messagebox
 import time
 
-HOST = 'pjbsh-2409-40e3-f-221-8cb8-6136-c52e-80ee.run.pinggy-free.link'
-PORT = 33041
+HOST = 'winsf-2409-4089-ae01-c2a9-cc6d-93e1-3d91-d9f4.run.pinggy-free.link'
+PORT = 42801
 
 
 class ChatClient:
