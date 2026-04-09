@@ -21,6 +21,18 @@ def broadcast(message, room_code, exclude=None):
         except Exception:
             pass
 
+def remove_client(client_sock,room_code):
+    with rooms_lock :
+        members = rooms.get(client_sock, [])
+        username = None 
+    for i, (sock,name) in enumerate(members) :
+        if sock is client_sock :
+            username = name
+            members.pop(i)
+            break
+        if room_code in rooms and len(rooms[room_code]) == 0 :
+            del rooms[room_code]
+    return username
 
 
 
