@@ -4,8 +4,8 @@ import tkinter as tk
 from tkinter import scrolledtext, messagebox
 import time
 
-HOST = 'winsf-2409-4089-ae01-c2a9-cc6d-93e1-3d91-d9f4.run.pinggy-free.link'
-PORT = 42801
+HOST = '127.0.0.1' # Change this if using Pinggy!
+PORT = 12345
 
 
 class ChatClient:
@@ -20,11 +20,11 @@ class ChatClient:
         self.root.title("Chat Room")
         self.root.geometry("520x620")
         self.root.minsize(420, 500)
-        self.root.configure(bg="#1e1e2e")
+        self.root.configure(bg="#1e1e1e")
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
 
         # ── colours & fonts ──────────────────────────────────────────
-        self.BG       = "#1e1e2e"
+        self.BG       = "#1e1e1e"
         self.FG       = "#cdd6f4"
         self.ACCENT   = "#89b4fa"
         self.INPUT_BG = "#313244"
@@ -196,9 +196,9 @@ class ChatClient:
             # wait for NICK prompt
             prompt = self.sock.recv(1024).decode('utf-8')
             if prompt != 'NICK':
-                # could be an error message
-                if prompt.startswith('ERROR:'):
-                    raise ConnectionError(prompt[6:])
+                # FIX: Check for generic 'ERROR' since server format changed
+                if prompt.startswith('ERROR'):
+                    raise ConnectionError(prompt)
                 raise ConnectionError("Unexpected server handshake.")
             self.sock.send(user.encode('utf-8'))
 
@@ -221,8 +221,8 @@ class ChatClient:
                     break
                 message = data.decode('utf-8')
 
-                # choose tag based on content
-                if message.startswith("SERVER:"):
+                # FIX: More robust check for system messages
+                if "SERVER :" in message or message.startswith("---"):
                     tag = "system"
                 else:
                     tag = None
@@ -241,10 +241,14 @@ class ChatClient:
         if not msg or not self.connected:
             return
         self.msg_entry.delete(0, tk.END)
-        full = f"{self.username}: {msg}"
+        
+        # Format what you see locally
+        local_display = f"{self.username}: {msg}"
+        
         try:
-            self.sock.send(full.encode('utf-8'))
-            self.display_message(full, tag="self")
+            # FIX: Send ONLY the message text. The server will attach your username!
+            self.sock.send(msg.encode('utf-8'))
+            self.display_message(local_display, tag="self")
         except Exception:
             self.display_message("** Failed to send message **", tag="error")
 
@@ -252,7 +256,13 @@ class ChatClient:
         """Thread-safe insertion into the ScrolledText widget."""
         def _insert():
             self.msg_area.config(state="normal")
-            self.msg_area.insert(tk.END, text + "\n", tag)
+            
+            # Prevent double newlines if history file already has them
+            if text.endswith('\n'):
+                self.msg_area.insert(tk.END, text, tag)
+            else:
+                self.msg_area.insert(tk.END, text + "\n", tag)
+                
             self.msg_area.config(state="disabled")
             self.msg_area.see(tk.END)
         self.root.after(0, _insert)
