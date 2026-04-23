@@ -3,19 +3,25 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Active_Development-orange)
 
-### 🏗️ System Architecture
+### 🏗️ System Architecture 
 
 ```mermaid
 sequenceDiagram
-    participant Client A
-    participant Server
-    participant Client B
+    participant A as Client A (Room: 1234)
+    participant S as Server
+    participant B as Client B (Room: 1234)
+    participant C as Client C (Room: 9999)
     
-    Client A->>Server: Connect (TCP)
-    Server-->>Client A: Accept & Spawn Thread
-    Client A->>Server: Send: "Hello Room!"
-    Server->>Client B: Broadcast: "Client A: Hello Room!"
+    A->>S: Connect & Join (Room Code: 1234)
+    B->>S: Connect & Join (Room Code: 1234)
+    C->>S: Connect & Join (Room Code: 9999)
     
+    A->>S: Send Message: "Hello Room!"
+    
+    Note over S: Server searches dictionary for<br/>clients mapped to Room 1234
+    
+    S->>B: Broadcast: "Client A: Hello Room!"
+    Note over S, C: Client C receives nothing (Different Room)
 ```
 ## Tech Stacks used : 
 
