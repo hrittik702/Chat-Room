@@ -15,6 +15,8 @@ sequenceDiagram
     Server-->>Client A: Accept & Spawn Thread
     Client A->>Server: Send: "Hello Room!"
     Server->>Client B: Broadcast: "Client A: Hello Room!"
+    
+```
 ## Tech Stacks used : 
 
 1. Python 3.12
