@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9b2cd21ac90f9935",
+        "id": "daf5dfaaca2f879b",
         "type": "tabs",
         "children": [
           {
-            "id": "8d657cdcdd1572be",
+            "id": "b506456d40f70b01",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,8 +183,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "8d657cdcdd1572be",
+  "active": "b506456d40f70b01",
   "lastOpenFiles": [
+    "LICENSE.md",
+    "readme.md",
     "screenshots/13_server_shutdown_and_tunnel_timeout.png",
     "screenshots/12_live_group_chat.png",
     "screenshots/11_multiple_rooms.png",
@@ -195,7 +197,6 @@
     "screenshots/06_server_logs_with_tunnel.png",
     "screenshots/05_login_screen_filled.png",
     "screenshots/04_login_screen_empty.png",
-    "screenshots/03_client_source_code.png",
     "screenshots"
   ]
 }

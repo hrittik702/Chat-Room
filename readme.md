@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=89B4FA&center=true&vCenter=true&multiline=true&repeat=true&width=500&height=70&lines=%F0%9F%92%AC+Chat+Room;Real-time+%C2%B7+Room-Based+%C2%B7+Persistent" alt="Chat Room Header" />
-</p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=89B4FA&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=90&lines=%F0%9F%92%AC+Chat+Room;Real-time+%C2%B7+Room-Based+%C2%B7+Persistent" alt="Chat Room Header" />
+  <p> </p>
 
 <p align="center">
   <strong>A multi-room, real-time chat application built from scratch with raw Python sockets, threading, and a Catppuccin-themed tkinter GUI.</strong>
@@ -13,7 +13,6 @@
   <img src="https://img.shields.io/badge/Concurrency-Threading-9C27B0?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Threading" />
   <img src="https://img.shields.io/badge/Tunnel-Pinggy-00C853?style=for-the-badge&logo=wireguard&logoColor=white" alt="Pinggy" />
   <img src="https://img.shields.io/badge/Status-Active%20Development-F9A825?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" />
 </p>
 
 ---
@@ -35,6 +34,7 @@
 - [Chat History & Persistence](#-chat-history--persistence)
 - [Screenshots](#-screenshots)
 - [Contributing](#-contributing)
+- [Team Members](#-team-members)
 - [License](#-license)
 
 ---
@@ -124,6 +124,7 @@ rooms = {
     ],
     "1004": [
         (socket_C, "Mayank")
+        (socket_D, "Priya")
     ]
 }
 ```
@@ -191,14 +192,14 @@ The client detects these by checking if the message contains `"SERVER :"` or sta
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology | Role |
-|:---|:---|:---|
-| **Networking** | Python `socket` | Raw TCP client/server communication |
-| **Concurrency** | Python `threading` | One daemon thread per connected client |
-| **GUI** | Python `tkinter` + `scrolledtext` | Desktop client with login and chat views |
-| **Persistence** | Flat text files (`room_XXXX.txt`) | Append-only chat history per room |
-| **Packaging** | PyInstaller (`client.spec`) | One-file `.exe` distribution for Windows |
-| **Tunneling** | Pinggy (SSH reverse tunnel) | Expose local server to the public internet |
+| Layer           | Technology                        | Role                                       |
+| :-------------- | :-------------------------------- | :----------------------------------------- |
+| **Networking**  | Python `socket`                   | Raw TCP client/server communication        |
+| **Concurrency** | Python `threading`                | One daemon thread per connected client     |
+| **GUI**         | Python `tkinter` + `scrolledtext` | Desktop client with login and chat views   |
+| **Persistence** | Flat text files (`room_XXXX.txt`) | Append-only chat history per room          |
+| **Packaging**   | PyInstaller (`client.spec`)       | One-file `.exe` distribution for Windows   |
+| **Tunneling**   | Pinggy (SSH reverse tunnel)       | Expose local server to the public internet |
 
 ---
 
@@ -238,7 +239,7 @@ Chat-Room/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/Chat-Room.git
+git clone https://github.com/hrittik702/Chat-Room.git
 cd Chat-Room
 ```
 
@@ -470,12 +471,59 @@ git push origin feature/your-feature
 
 ---
 
+## 👥 Team Members
+
+This project was built collaboratively by a team of **8 members** from [Rajkiya Engineering College, Ambedkar Nagar](https://recabn.ac.in/).
+
+<table align="center">
+  <tr>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Hritik+Maurya&background=89b4fa&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Hrittik Maurya</b>
+    </td>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Agam+Pandey&background=a6e3a1&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Agam Pandey</b>
+    </td>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Kartikey+Mishra&background=f9e2af&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Kartikey Mishra</b>
+    </td>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Mayank+Soni&background=fab387&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Mayank Soni</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Manvendra+Singh&background=cba6f7&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Manvendra Singh</b>
+    </td>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Priya+Dwivedi&background=f38ba8&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Priya Dwivedi</b>
+    </td>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Anjali+Saroj&background=94e2d5&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Anjali Saroj</b>
+    </td>
+    <td align="center" width="150">
+      <img src="https://ui-avatars.com/api/?name=Smriti+Maurya&background=74c7ec&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <b>Smriti Maurya</b>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><em>B.Tech CSE — Rajkiya Engineering College, Ambedkar Nagar</em></p>
+
+---
+
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [Rajkiya Engineering College, Ambedkar Nagar](https://recabn.ac.in/)
 
 ---
 
 <p align="center">
-  Built with ❤️ using nothing but the <strong>Python Standard Library</strong>
+  Built with Team ❤️ using nothing but the <strong>Python Standard Library</strong>
 </p>
