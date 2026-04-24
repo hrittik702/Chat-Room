@@ -514,7 +514,7 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
   </tr>
 </table>
 
-<p align="center"><em>B.Tech CSE — Rajkiya Engineering College, Ambedkar Nagar</em></p>
+<p align="center"><em>B.Tech IT — Rajkiya Engineering College, Ambedkar Nagar</em></p>
 
 ---
 
