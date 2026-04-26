@@ -4,8 +4,8 @@ import tkinter as tk
 from tkinter import scrolledtext, messagebox
 import time
 
-HOST = 'qqagy-2409-4089-bc4b-d7f-466a-ea3f-d665-1a42.run.pinggy-free.link' # Change this if using Pinggy!
-PORT = 33825
+HOST = '127.0.0.1' # Change this if using Pinggy!
+PORT = 12345
 
 
 class ChatClient:
@@ -44,9 +44,7 @@ class ChatClient:
 
         self.root.mainloop()
 
-    # ══════════════════════════════════════════════════════════════════
     #  LOGIN SCREEN
-    # ══════════════════════════════════════════════════════════════════
     def build_login_screen(self):
         if self.chat_frame:
             self.chat_frame.destroy()
@@ -100,9 +98,7 @@ class ChatClient:
         )
         self.err_label.pack(pady=(10, 0))
 
-    # ══════════════════════════════════════════════════════════════════
     #  CHAT SCREEN
-    # ══════════════════════════════════════════════════════════════════
     def build_chat_screen(self):
         if self.login_frame:
             self.login_frame.destroy()
@@ -142,10 +138,25 @@ class ChatClient:
         )
         self.msg_area.pack(fill="both", expand=True, padx=6, pady=(4, 0))
 
-        # tag styles for coloured messages
-        self.msg_area.tag_config("system", foreground=self.SYS_CLR)
-        self.msg_area.tag_config("self", foreground=self.ACCENT)
-        self.msg_area.tag_config("error", foreground=self.ERR)
+        # aligning messages
+        self.msg_area.tag_config(
+            "align_right", justify="right",
+            foreground=self.ACCENT,
+            lmargin1=80, lmargin2=80, rmargin=8,
+            spacing1=2, spacing3=2
+        )
+        self.msg_area.tag_config(
+            "align_left", justify="left",
+            foreground=self.FG,
+            lmargin1=8, lmargin2=8, rmargin=80,
+            spacing1=2, spacing3=2
+        )
+        self.msg_area.tag_config(
+            "server_msg", justify="center",
+            foreground="#a6e3a1",
+            spacing1=4, spacing3=4
+        )
+        self.msg_area.tag_config("error", foreground=self.ERR, justify="center")
 
         # bottom bar: entry + send
         bottom = tk.Frame(self.chat_frame, bg="#181825")
@@ -166,9 +177,7 @@ class ChatClient:
         )
         send_btn.pack(side="right", ipady=6)
 
-    # ══════════════════════════════════════════════════════════════════
     #  NETWORKING
-    # ══════════════════════════════════════════════════════════════════
     def join_room(self):
         room = self.room_entry.get().strip()
         user = self.user_entry.get().strip()
@@ -187,16 +196,13 @@ class ChatClient:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.sock.connect((HOST, PORT))
 
-            # wait for ROOM prompt
             prompt = self.sock.recv(1024).decode('utf-8')
             if prompt != 'ROOM':
                 raise ConnectionError("Unexpected server handshake.")
             self.sock.send(room.encode('utf-8'))
 
-            # wait for NICK prompt
             prompt = self.sock.recv(1024).decode('utf-8')
             if prompt != 'NICK':
-                # FIX: Check for generic 'ERROR' since server format changed
                 if prompt.startswith('ERROR'):
                     raise ConnectionError(prompt)
                 raise ConnectionError("Unexpected server handshake.")
@@ -219,15 +225,32 @@ class ChatClient:
                 data = self.sock.recv(4096)
                 if not data:
                     break
-                message = data.decode('utf-8')
+                raw = data.decode('utf-8')
 
-                # FIX: More robust check for system messages
-                if "SERVER :" in message or message.startswith("---"):
-                    tag = "system"
-                else:
-                    tag = None
+                lines = raw.splitlines()
+                for line in lines:
+                    line = line.strip()
+                    if not line:
+                        continue
 
-                self.display_message(message, tag=tag)
+                    if line.startswith("SERVER :") or line.startswith("---"):
+                        tag = "server_msg"
+                        display_text = line
+                    elif ":" in line:
+                        sender, body = line.split(":", 1)
+                        sender = sender.strip()
+                        body = body.strip()
+                        if sender == self.username:
+                            tag = "align_right"
+                            display_text = body
+                        else:
+                            tag = "align_left"
+                            display_text = f"{sender}: {body}"
+                    else:
+                        tag = "server_msg"
+                        display_text = line
+
+                    self.display_message(display_text, tag=tag)
 
             except (ConnectionResetError, ConnectionAbortedError, OSError):
                 break
@@ -241,14 +264,10 @@ class ChatClient:
         if not msg or not self.connected:
             return
         self.msg_entry.delete(0, tk.END)
-        
-        # Format what you see locally
-        local_display = f"{self.username}: {msg}"
-        
+
         try:
-            # FIX: Send ONLY the message text. The server will attach your username!
             self.sock.send(msg.encode('utf-8'))
-            self.display_message(local_display, tag="self")
+            self.display_message(msg, tag="align_right")
         except Exception:
             self.display_message("** Failed to send message **", tag="error")
 
@@ -256,8 +275,6 @@ class ChatClient:
         """Thread-safe insertion into the ScrolledText widget."""
         def _insert():
             self.msg_area.config(state="normal")
-            
-            # Prevent double newlines if history file already has them
             if text.endswith('\n'):
                 self.msg_area.insert(tk.END, text, tag)
             else:
