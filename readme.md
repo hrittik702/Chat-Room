@@ -478,7 +478,7 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
 <table align="center">
   <tr>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Hritik+Maurya&background=89b4fa&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="/profiles/IMG_20260109_055432.jpg&rounded=true" width="80" /><br />
       <b>Hrittik Maurya</b><br />
       <b>2407370130032</b>
     </td>
