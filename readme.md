@@ -479,7 +479,8 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
   <tr>
     <td align="center" width="150">
       <img src="https://ui-avatars.com/api/?name=Hritik+Maurya&background=89b4fa&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
-      <b>Hrittik Maurya</b>
+      <b>Hrittik Maurya</b><br />
+      <b>2407370130032</b>
     </td>
     <td align="center" width="150">
       <img src="https://ui-avatars.com/api/?name=Agam+Pandey&background=a6e3a1&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
@@ -488,8 +489,7 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
     </td>
     <td align="center" width="150">
       <img src="https://ui-avatars.com/api/?name=Kartikey+Mishra&background=f9e2af&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
-      <b>Kartikey Mishra</b><br />
-      <b>2407370130034</b>
+      <b>Kartikeya Mishra</b>
     </td>
     <td align="center" width="150">
       <img src="https://ui-avatars.com/api/?name=Mayank+Soni&background=fab387&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
@@ -509,7 +509,8 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
     </td>
     <td align="center" width="150">
       <img src="https://ui-avatars.com/api/?name=Anjali+Saroj&background=94e2d5&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
-      <b>Anjali Saroj</b>
+      <b>Anjali Saroj</b><br />
+      <b>2407370130017</b>
     </td>
     <td align="center" width="150">
       <img src="https://ui-avatars.com/api/?name=Smriti+Maurya&background=74c7ec&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
