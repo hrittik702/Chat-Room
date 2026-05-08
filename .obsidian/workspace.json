@@ -8,17 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b506456d40f70b01",
+            "id": "fac7782252ab0e12",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "readme.md",
-                "mode": "source",
-                "source": false
+                "file": "screenshots/13_server_shutdown_and_tunnel_timeout.png"
               },
-              "icon": "lucide-file",
-              "title": "readme"
+              "icon": "lucide-image",
+              "title": "13_server_shutdown_and_tunnel_timeout"
             }
           }
         ]
@@ -94,17 +92,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "screenshots/13_server_shutdown_and_tunnel_timeout.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for readme"
+              "title": "Backlinks for 13_server_shutdown_and_tunnel_timeout"
             }
           },
           {
@@ -113,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
+                "file": "screenshots/13_server_shutdown_and_tunnel_timeout.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from readme"
+              "title": "Outgoing links from 13_server_shutdown_and_tunnel_timeout"
             }
           },
           {
@@ -156,20 +154,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "readme.md",
+                "file": "screenshots/13_server_shutdown_and_tunnel_timeout.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of readme"
+              "title": "Outline of 13_server_shutdown_and_tunnel_timeout"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -183,20 +182,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "b506456d40f70b01",
+  "active": "fac7782252ab0e12",
   "lastOpenFiles": [
-    "LICENSE.md",
-    "readme.md",
-    "screenshots/13_server_shutdown_and_tunnel_timeout.png",
     "screenshots/12_live_group_chat.png",
     "screenshots/11_multiple_rooms.png",
     "screenshots/10_active_chat_session.png",
     "screenshots/09_chat_history_clean.png",
-    "screenshots/08_chat_history_file.png",
     "screenshots/07_server_logs_extended.png",
     "screenshots/06_server_logs_with_tunnel.png",
     "screenshots/05_login_screen_filled.png",
     "screenshots/04_login_screen_empty.png",
+    "screenshots/03_client_source_code.png",
+    "screenshots/02_pinggy_tunnel.png",
+    "screenshots/01_server_startup.png",
+    "readme.md",
+    "LICENSE.md",
     "screenshots"
   ]
 }
