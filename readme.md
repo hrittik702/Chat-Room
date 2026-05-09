@@ -49,17 +49,17 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
       <b>2407370130037</b>
     </td>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Priya+Dwivedi&background=f38ba8&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/priya.png" width="80" style="border-radius:50%;" /><br />
       <b>Priya Dwivedi</b><br />
       <b>2407370130047</b>
     </td>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Anjali+Saroj&background=94e2d5&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/anjali.png" width="80" style="border-radius:50%;" /><br />
       <b>Anjali Saroj</b><br />
       <b>2407370130017</b>
     </td>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Smriti+Maurya&background=74c7ec&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/smriti.png" width="80" style="border-radius:50%;" /><br />
       <b>Smriti Maurya</b><br />
       <b>2407370130060</b>
     </td>
