@@ -44,7 +44,7 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
   </tr>
   <tr>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Manvendra+Singh&background=cba6f7&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/manvendra.png" width="80" style="border-radius:50%;" /><br />
       <b>Manvendra Singh</b><br />
       <b>2407370130037</b>
     </td>
