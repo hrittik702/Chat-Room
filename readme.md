@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/Tunnel-Pinggy-00C853?style=for-the-badge&logo=wireguard&logoColor=white" alt="Pinggy" />
   <img src="https://img.shields.io/badge/Status-Active%20Development-F9A825?style=for-the-badge" alt="Status" />
 </p>
----
 
 ## 👥 Team Members
 
@@ -112,8 +111,6 @@ Users connect through a polished **tkinter desktop client** with a Catppuccin Mo
 | **✅ Input Validation** | Both client and server enforce that room codes must be **exactly 4 digits** and usernames must be **non-empty**. |
 
 <p align="center">
-  <img src="screenshots/04_login_screen_empty.png" width="340" alt="Login screen — clean dark-themed entry form" />
-  &nbsp;&nbsp;&nbsp;
   <img src="screenshots/05_login_screen_filled.png" width="340" alt="Login screen — room code and username entered" />
 </p>
 <p align="center"><em>Client login screen — enter a 4-digit room code and a username to join</em></p>
@@ -291,7 +288,7 @@ The server binds to `127.0.0.1:12345` and begins accepting connections:
 Server listening on 127.0.0.1:12345 ...
 ```
 
-> **Tip:** The server runs indefinitely. Press `Ctrl+C` to gracefully shut down.
+> **For Closing Server:** The server runs indefinitely. Press `Ctrl+C` to gracefully shut down.
 
 ### 2. Launch the Client
 
