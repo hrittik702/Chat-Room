@@ -11,12 +11,14 @@
             "id": "fac7782252ab0e12",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "screenshots/13_server_shutdown_and_tunnel_timeout.png"
+                "file": "readme.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "13_server_shutdown_and_tunnel_timeout"
+              "icon": "lucide-file",
+              "title": "readme"
             }
           }
         ]
@@ -184,6 +186,7 @@
   },
   "active": "fac7782252ab0e12",
   "lastOpenFiles": [
+    "screenshots/13_server_shutdown_and_tunnel_timeout.png",
     "screenshots/12_live_group_chat.png",
     "screenshots/11_multiple_rooms.png",
     "screenshots/10_active_chat_session.png",
@@ -194,7 +197,6 @@
     "screenshots/04_login_screen_empty.png",
     "screenshots/03_client_source_code.png",
     "screenshots/02_pinggy_tunnel.png",
-    "screenshots/01_server_startup.png",
     "readme.md",
     "LICENSE.md",
     "screenshots"
