@@ -38,7 +38,6 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
     </td>
     <td align="center" width="150">
       <img src="profiles/mayank.png" width="80" style="border-radius:50%;" /><br />
-      <b>Agam Pandey</b><br />
       <b>Mayank Soni</b><br />
       <b>2407370130038</b>
     </td>
