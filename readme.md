@@ -22,22 +22,24 @@ This project was built collaboratively by a team of **8 members** from [Rajkiya 
 <table align="center">
   <tr>
     <td align="center" width="150">
-      <img src="profiles/IMG_20260109_055432.png" width="80" style="border-radius:50%;" /><br />
+      <img src="profiles/hrittik.png" width="80" style="border-radius:50%;" /><br />
       <b>Hrittik Maurya</b><br />
       <b>2407370130032</b>
     </td>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Agam+Pandey&background=a6e3a1&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/agam.png" width="80" style="border-radius:50%;" /><br />
       <b>Agam Pandey</b><br />
       <b>2407370130007</b>
     </td>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Kartikey+Mishra&background=f9e2af&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/kartikey.png" width="80" style="border-radius:50%;" /><br />
+      <b>Agam Pandey</b><br />
       <b>Kartikeya Mishra</b><br />
       <b>2407370130034</b>
     </td>
     <td align="center" width="150">
-      <img src="https://ui-avatars.com/api/?name=Mayank+Soni&background=fab387&color=1e1e2e&size=100&bold=true&rounded=true" width="80" /><br />
+      <img src="profiles/mayank.png" width="80" style="border-radius:50%;" /><br />
+      <b>Agam Pandey</b><br />
       <b>Mayank Soni</b><br />
       <b>2407370130038</b>
     </td>
